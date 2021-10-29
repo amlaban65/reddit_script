@@ -37,7 +37,7 @@ def load_reddit_data(url):
     url_concat = url[:4]
     if http != url[:4]:
         url = "https://www.reddit.com/r/" + url + "/.json"
-    headers = {"user-agent": "CIS 192-202 Fall 2020 HW3 by amlaban@sas.upenn.edu"}
+    headers = {"user-agent": "Reddit_script by amlaban@sas.upenn.edu"}
     response = requests.get(url, headers=headers)
     response_json = response.json()
     return response_json['data']['children']
